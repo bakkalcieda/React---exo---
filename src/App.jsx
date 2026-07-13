@@ -1,0 +1,27 @@
+import { Demo1 } from "./demo/Demo1"
+import { Demo2 } from "./demo/Demo2"
+import { Demo3 } from "./demo/Demo3"
+import { ListeFilms } from "./demo/ListeFilms"
+import { Film } from "./demo/Film"
+
+function App() {
+  
+  return (
+    <>
+    <h1 className="text-3xl font-semibold text-amber-50 bg-amber-700" > Démo REACT </h1> 
+    /* <Demo1  prenom ="Eda" nom="Bakkalci" age ={27}/>
+    <Demo1 prenom = "Aude "/>
+    <Demo2 firstname = "Eda" havePet ={true} type ='dog'  name ='Vulpa'/>
+    <Demo2 firstname = "Thierry" havePet = {false}/>
+    <Demo2 firstname = "Aude" havePet ={true} type ='cat'  name ='Soup' imgUrl="/soup.jpg"/>
+    <Demo2 firstname = "Mére Michelle " havePet ={true} type ='cat' />
+    <Demo3 firstname="Didier" hobbies = {['Pétanque','Le fooot','le pastis','les soirées']}/>
+    <h1 className="text-2xl font-ibold text-amber-100 bg-amber-600 justify-center flex gap-4 mb-6"> Ma collection de films </h1>
+    <ListeFilms />
+    {/* <Film name ="" synopsis ="" genres = {[]} affiche ="public/soup.jpg" favoris = {true} /> */}
+    </>
+
+  )
+}
+
+export default App
