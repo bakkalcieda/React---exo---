@@ -1,4 +1,4 @@
-import { Film } from "./film"
+import { Film } from "./Film"
 
 
 export const ListeFilms = () => {

@@ -1,8 +1,11 @@
 import { Demo1 } from "./demo/Demo1"
 import { Demo2 } from "./demo/Demo2"
 import { Demo3 } from "./demo/Demo3"
-import { ListeFilms } from "./demo/ListeFilms"
-import { Film } from "./demo/Film"
+import { ListeFilms } from "./Exercices/ListeFilms"
+import { CompteurNul } from "./Exercices/CompteurNul"
+import  DayNight from "./Exercices/DayNight"
+import PierrePapierCiseaux from "./Exercices/PierrePapierCiseaux"
+
 
 function App() {
   
@@ -15,10 +18,14 @@ function App() {
     <Demo2 firstname = "Thierry" havePet = {false}/>
     <Demo2 firstname = "Aude" havePet ={true} type ='cat'  name ='Soup' imgUrl="/soup.jpg"/>
     <Demo2 firstname = "Mére Michelle " havePet ={true} type ='cat' />
-    <Demo3 firstname="Didier" hobbies = {['Pétanque','Le fooot','le pastis','les soirées']}/>
+    <Demo3 firstname="Didier" hobbies = {['Pétanque','Le fooot','le pastis','les soirées']} />
+    <CompteurNul />
+    <h1 className="text-2xl font-ibold text-amber-100 bg-amber-600 justify-center flex gap-4 mb-6">Exercice JOUR et NUIT</h1>
+    <DayNight/>
+    <h1 className="text-2xl font-ibold text-amber-100 bg-amber-600 justify-center flex gap-4 mb-6"> Exercice  Pierre/Papier/Ciseaux</h1>
+    <PierrePapierCiseaux/>
     <h1 className="text-2xl font-ibold text-amber-100 bg-amber-600 justify-center flex gap-4 mb-6"> Ma collection de films </h1>
     <ListeFilms />
-    {/* <Film name ="" synopsis ="" genres = {[]} affiche ="public/soup.jpg" favoris = {true} /> */}
     </>
 
   )
