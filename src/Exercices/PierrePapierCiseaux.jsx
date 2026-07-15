@@ -21,10 +21,10 @@ function jouer (choixJoueur) {
 }
 return (
     <div style={{ textAlign: "center", marginTop: "20px", marginBottom :"20px"}}>
-        {/* <h2> Pierre -Papier -Ciseaux</h2> */}
-        <button  className='cursor-pointer' onClick={() => jouer("Pierre")}> Pierre 🪨</button>
-        <button className = 'cursor-pointer' onClick={() => jouer("Papier")}> Papier 🗒️</button>
-        <button  className = 'cursor-pointer'onClick={() => jouer("Ciseaux")}> Ciseaux ✂️</button>
+
+        <button className='cursor-pointer bg-blue-300' onClick={() => jouer("Pierre")}> Pierre 🪨</button>
+        <button className = 'cursor-pointer  bg-blue-600' onClick={() => jouer("Papier")}> Papier 🗒️</button>
+        <button className = 'cursor-pointer  bg-blue-900 'onClick={() => jouer("Ciseaux")}> Ciseaux ✂️</button>
         <p> {resulat}</p>
     </div>
 )

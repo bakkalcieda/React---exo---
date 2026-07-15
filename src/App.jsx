@@ -5,6 +5,9 @@ import { ListeFilms } from "./Exercices/ListeFilms"
 import { CompteurNul } from "./Exercices/CompteurNul"
 import  DayNight from "./Exercices/DayNight"
 import PierrePapierCiseaux from "./Exercices/PierrePapierCiseaux"
+import { IntroForm } from "./demo/IntroForm"
+import { IntroForm2 } from "./demo/IntroForm2"
+import { FormLib } from "./demo/FormLib"
 
 
 function App() {
@@ -12,7 +15,7 @@ function App() {
   return (
     <>
     <h1 className="text-3xl font-semibold text-amber-50 bg-amber-700" > Démo REACT </h1> 
-    /* <Demo1  prenom ="Eda" nom="Bakkalci" age ={27}/>
+    <Demo1  prenom ="Eda" nom="Bakkalci" age ={27}/>
     <Demo1 prenom = "Aude "/>
     <Demo2 firstname = "Eda" havePet ={true} type ='dog'  name ='Vulpa'/>
     <Demo2 firstname = "Thierry" havePet = {false}/>
@@ -26,6 +29,9 @@ function App() {
     <PierrePapierCiseaux/>
     <h1 className="text-2xl font-ibold text-amber-100 bg-amber-600 justify-center flex gap-4 mb-6"> Ma collection de films </h1>
     <ListeFilms />
+    <IntroForm />
+    <IntroForm2 />
+    <FormLib />
     </>
 
   )
