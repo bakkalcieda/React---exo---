@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"
 
 export const FormulaireEvenement = () => {
 
-    const { register, handleSubmit,
+    const { register, handleSubmit, watch,
     formState : { errors} } = useForm ({
         defaultValues : {
             nom :'',
@@ -20,7 +20,7 @@ export const FormulaireEvenement = () => {
 );
 
 const [recap,setRecap] = useState(null);
-const [hasAllergies,setHasAllergies] = useState(false);
+// const [hasAllergies,setHasAllergies] = useState(false);
 
 const onSubmit = (data) => {
     setRecap(data);
@@ -49,7 +49,7 @@ return (
             )
             }
         />
-        {errors.nom && <p className=" text-red-500 text-sm"></p> }
+        {errors.nom && <p className=" text-red-500 text-sm">{errors.nom.message}</p> }
     </div>
 {/* ___________________________________________________________ */}
 
@@ -72,7 +72,7 @@ return (
             )
             }
         />
-        {<errors className="prenom"></errors> && <p className=" text-red-500 text-sm"></p> }
+        {errors.prenom && <p className=" text-red-500 text-sm">{errors.prenom.message}</p> }
     </div>
 {/* _____________________________________________________________ */}
 
@@ -153,8 +153,8 @@ return (
         )
         }
         >
-    <option value="">-- Séléctionnz--</option>
-    <option value="Standart">Standart</option>
+    <option value="">-- Séléctionnez--</option>
+    <option value="Standard">Standard</option>
     <option value="Végétarien">Végétarien</option>
     <option value="Vegan"> Vegan</option>
     <option value="Sans gluten"> Sans gluten</option>
@@ -174,16 +174,17 @@ return (
                 <input
                         id="hasAllergies"
                         type="checkbox"
-                    {...register('hasAllergies', {
-                                onChange: (e) => setHasAllergies(e.target.checked)
-                            }
+                    {...register('hasAllergies', 
+                        // {
+                        //         onChange: (e) => setHasAllergies(e.target.checked)
+                        //     }
                         )
                     }
                         />
                     <label htmlFor="hasAllergies"> Présence d'alléergie</label>
 </div>
 {/* ALERGIE champ / liste */}
-{hasAllergies && (
+{watch('hasAllergies') && (
     <div className=" flex flex-col gap-1">
         <label htmlFor="allergies"> Liste des allergies</label>
         <input 
@@ -192,7 +193,7 @@ return (
                 {...register('allergies', {
                     validate :(value) => {
                         if
-                            (hasAllergies && !value.trim()) {
+                            (watch('hasAllergies') && !value.trim()) {
                                 return(
                                 'Vous avez ooublié de mettre la liste de vos allergies'
                                 );
@@ -211,10 +212,8 @@ return (
                     </p>
                     }
     </div>
-) 
-}
-
-
+)}
+<button type="submit" className=" bg-rose-300 text-white py-2 px-4 mt-2 hover:bg-rose-400"> Valider la réservation </button>
     </form>
 
 </div>
