@@ -8,7 +8,7 @@ import PierrePapierCiseaux from "./Exercices/PierrePapierCiseaux"
 import { IntroForm } from "./demo/IntroForm"
 import { IntroForm2 } from "./demo/IntroForm2"
 import { FormLib } from "./demo/FormLib"
-
+import { FormulaireEvenement } from "./Exercices/FormulaireEvenement"
 
 function App() {
   
@@ -32,6 +32,7 @@ function App() {
     <IntroForm />
     <IntroForm2 />
     <FormLib />
+    <FormulaireEvenement/>
     </>
 
   )
